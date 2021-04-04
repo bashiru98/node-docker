@@ -2,9 +2,9 @@ version: '3.7'
 services:
     backend-server:
         image: backend-server
-        build: .
+        restart: unless-stopped
         ports:
-            - "5000:5000"
+            - "6000:6000"
         networks:
             - mern-app
         depends_on:
